@@ -4,7 +4,7 @@ A SQL-based analysis of a bike retailer's sales data — exploring the customer 
 
 ## Why this project
 
-I wanted to сombinу EDA-style exploration (what does the data even look like?) with more advanced techniques — window functions, running totals, year-over-year comparisons, and segmentation — and packaging the results into reusable reporting views.
+I wanted to combine EDA-style exploration (what does the data even look like?) with more advanced techniques — window functions, running totals, year-over-year comparisons, and segmentation — and packaging the results into reusable reporting views.
 
 ## Dataset
 
@@ -49,7 +49,25 @@ Two reusable views that pull everything together:
 ```
 retail-sql-analytics/
 ├── README.md
+├── 00_setup.sql
 ├── 01_eda_exploration.sql
 ├── 02_advanced_analytics.sql
-└── 03_customer_product_reports.sql
+├── 03_customer_product_reports.sql
+└── datasets/
+    ├── gold.dim_customers.csv
+    ├── gold.dim_products.csv
+    └── gold.fact_sales.csv
 ```
+
+## How to Run
+
+These scripts are written in **T-SQL** and were run on **SQL Server** (e.g. via SQL Server Management Studio or Azure Data Studio).
+
+1. Download this repo and note the path to the `datasets/` folder
+2. Open `00_setup.sql`, update the `BULK INSERT` file paths to point to your local `datasets/` folder, and run it — this creates the `gold` schema with `dim_customers`, `dim_products`, and `fact_sales`, and loads them from the CSVs
+3. Run `01_eda_exploration.sql` for the exploration queries
+4. Run `02_advanced_analytics.sql` for trend, cumulative, performance, and segmentation queries
+5. Run `03_customer_product_reports.sql` to create the `gold.report_customers` and `gold.report_products` views
+
+The dataset is a small star-schema retail dataset — ~18K customers, ~300 products, ~60K sales records (Dec 2010 – Jan 2014).
+
