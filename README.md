@@ -39,9 +39,9 @@ Two reusable views that pull everything together:
 
 ## Key Findings
 
-- **Bikes dominate revenue**: ~96.5% of total sales (~$29.4M) come from the Bikes category — Accessories and Clothing combined are under 4%.
-- **Road Bikes is the single biggest subcategory**, generating ~$14.5M (about half of all revenue), followed by Mountain Bikes (~$10.0M).
-- **Customer base skews "New"**: of 18,484 customers, ~79% fall into the New segment (under 12 months of activity), ~12% are Regular, and ~9% are VIP — suggesting retention/repeat-purchase is an area worth digging into further.
+- **Bikes dominate revenue**: \~96.5% of total sales (\~$29.4M) come from the Bikes category — Accessories and Clothing combined are under 4%.
+- **Road Bikes is the single biggest subcategory**, generating \~$14.5M (about half of all revenue), followed by Mountain Bikes (\~$10.0M).
+- **Customer base skews "New"**: of 18,484 customers, \~79% fall into the New segment (under 12 months of activity), \~12% are Regular, and \~9% are VIP — suggesting retention/repeat-purchase is an area worth digging into further.
 - Sales data spans **Dec 2010 – Jan 2014**, giving enough history for meaningful YoY and cumulative trend analysis.
 
 ## Repository Structure
@@ -69,5 +69,5 @@ These scripts are written in **T-SQL** and were run on **SQL Server** (e.g. via 
 4. Run `02_advanced_analytics.sql` for trend, cumulative, performance, and segmentation queries
 5. Run `03_customer_product_reports.sql` to create the `gold.report_customers` and `gold.report_products` views
 
-The dataset is a small star-schema retail dataset — ~18K customers, ~300 products, ~60K sales records (Dec 2010 – Jan 2014).
+The dataset is a small star-schema retail dataset — \~18K customers, \~300 products, \~60K sales records (Dec 2010 – Jan 2014).
 
